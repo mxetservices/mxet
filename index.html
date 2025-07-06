@@ -7,16 +7,19 @@
     <meta name="description" content="Affordable digital tools and services to simplify tasks and boost growth for businesses and individuals.">
     <meta name="keywords" content="digital solutions, productivity tools, business automation, finance, marketing">
 
+
     <link rel="icon" href="assets/images/favicon.ico" sizes="any">
     <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
     <link rel="manifest" href="assets/images/site.webmanifest">
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 
     <style>
         :root {
@@ -43,7 +46,7 @@
         .logo-section { display: flex; align-items: center; gap: 15px; }
         .logo-section a { text-decoration: none; display: flex; align-items: center; gap: 15px; }
         .logo { width: 50px; height: 50px; border-radius: 50%; object-fit: cover; border: 3px solid var(--primary-green); }
-        .tagline { color: var(--neutral-grey); font-weight: 500; font-size: 1.2rem; transition: font-size 0.3s ease; }
+        .tagline { color: var(--dark-text); font-weight: 500; font-size: 1.2rem; transition: font-size 0.3s ease; }
         .header-nav { display: flex; gap: 30px; align-items: center; }
         .header-nav a { color: var(--dark-text); text-decoration: none; font-weight: 500; transition: var(--transition); position: relative; padding: 8px 16px; border-radius: 8px; }
         .header-nav a:not(.cta-button):hover { color: var(--primary-green); background: rgba(0, 81, 61, 0.1); }
@@ -54,7 +57,7 @@
         body.menu-open .menu-overlay { display: block; opacity: 1; }
         .mobile-nav { display: flex; flex-direction: column; position: fixed; top: 0; right: 0; width: 280px; height: 100%; background: var(--primary-green); z-index: 1050; padding: 60px 20px 20px; box-shadow: -5px 0 15px rgba(0,0,0,0.2); transform: translateX(100%); transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
         body.menu-open .mobile-nav { transform: translateX(0); }
-        .mobile-nav a { color: var(--white); font-size: 1.3rem; font-weight: 500; text-decoration: none; padding: 15px 10px; border-radius: 8px; transition: var(--transition); }
+        .mobile-nav a { color: var(--white); font-size: 0.91rem; font-weight: 500; text-decoration: none; padding: 15px 10px; border-radius: 8px; transition: var(--transition); }
         .mobile-nav a:hover { background: rgba(255, 255, 255, 0.1); transform: translateX(5px); }
         .hero { background: var(--gradient-primary); color: var(--white); padding: 100px 0; position: relative; overflow: hidden; background: linear-gradient(rgba(0, 81, 61, 0.7), rgba(0, 107, 82, 0.8)), url('assets/images/hero.jpg') center/cover no-repeat; background-color: var(--primary-green); }
         .hero-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; text-align: center; position: relative; z-index: 2; }
@@ -75,11 +78,12 @@
         .category-icon { width: 50px; height: 50px; background: var(--gradient-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--white); font-size: 1.5rem; }
         .category-title { font-family: 'Roboto', sans-serif; font-size: 1.8rem; font-weight: 600; color: var(--accent-red); }
         .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
-        .service-card { background: var(--white); border-radius: var(--border-radius); padding: 30px; box-shadow: var(--shadow-sm); border: 1px solid #e5e7eb; transition: var(--transition); position: relative; overflow: hidden; }
+        .service-card { background: var(--white); border-radius: var(--border-radius); padding: 30px; box-shadow: var(--shadow-sm); border: 1px solid #e5e7eb; transition: var(--transition); position: relative; overflow: hidden; display: flex; flex-direction: column; }
         .service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--gradient-primary); }
         .service-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); border-color: var(--primary-green); }
         .service-card h4 { font-family: 'Roboto', sans-serif; font-size: 1.3rem; font-weight: 600; color: var(--dark-text); margin-bottom: 15px; }
-        .service-card p { color: var(--neutral-grey); margin-bottom: 25px; line-height: 1.6; }
+        .service-card p { color: var(--neutral-grey); margin-bottom: 25px; line-height: 1.6; flex-grow: 1; }
+        .service-card ul { color: var(--neutral-grey); margin-bottom: 25px; line-height: 1.6; flex-grow: 1; padding-left: 20px; }
         .service-actions { display: flex; gap: 12px; flex-wrap: wrap; }
         .btn-learn { background: var(--gradient-primary); color: var(--white); padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: var(--transition); display: inline-flex; align-items: center; gap: 6px; border: none; cursor: pointer; font-family: inherit; }
         .btn-learn:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
@@ -93,8 +97,10 @@
         .store-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px; }
         .product-card { background: var(--white); border-radius: var(--border-radius); overflow: hidden; box-shadow: var(--shadow-md); transition: var(--transition); }
         .product-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
-        .product-image { width: 100%; height: 200px; background: var(--primary-green); }
+        .product-image { width: 100%; height: 200px; display: flex; align-items: center; justify-content: center; background-color: #f0f0f0; position: relative; }
         .product-image img { width: 100%; height: 100%; object-fit: cover; }
+        .product-image.img-error img { display: none; }
+        .product-image.img-error::after { content: '\f1c5'; font-family: "Font Awesome 6 Free"; font-weight: 900; font-size: 4rem; color: #bdbdbd; }
         .product-content { padding: 25px; }
         .product-title { font-family: 'Roboto', sans-serif; font-size: 1.2rem; font-weight: 600; color: var(--dark-text); margin-bottom: 10px; }
         .product-description { color: var(--neutral-grey); margin-bottom: 20px; line-height: 1.6; }
@@ -158,8 +164,8 @@
                 <a href="#services">Services</a>
                 <a href="#store">Store</a>
                 <a href="#how-it-works">How It Works</a>
-                <a href="#contact" class="cta-button">
-                    <i class="fas fa-envelope"></i> Get Started
+                <a href="https://forms.gle/ckJ2NMokfh3DjMZ38" class="cta-button" target="_blank">
+                    Fill Out Our 3-Minute Brief
                 </a>
             </nav>
             <button class="mobile-menu-toggle">
@@ -167,6 +173,7 @@
             </button>
         </div>
     </header>
+
 
     <div class="menu-overlay"></div>
     <nav class="mobile-nav">
@@ -176,6 +183,7 @@
         <a href="#contact">Contact</a>
         <a href="mailto:mxetservices@gmail.com">Email Us</a>
     </nav>
+
 
     <section class="hero">
         <div class="hero-container">
@@ -192,6 +200,7 @@
         </div>
     </section>
 
+
     <section id="services" class="services">
         <div class="services-container">
             <div class="section-header">
@@ -206,34 +215,61 @@
                 <div class="service-grid">
                     <div class="service-card">
                         <h4>Digital Form & Data Systems</h4>
-                        <p>Effortlessly collect data with custom forms for events, surveys, or attendance-perfect for organizations and businesses.</p>
+                        <p>We build tailored solutions to collect, organize, and analyze data for:</p>
+                        <ul>
+                            <li>Event & Conference Registrations</li>
+                            <li>Membership & Student Enrollment</li>
+                            <li>Surveys & Customer Feedback</li>
+                            <li>Attendance & Event Check-ins</li>
+                            <li>Custom Data Collection & Research</li>
+                        </ul>
                         <div class="service-actions">
                             <button class="btn-learn learn-more" data-modal="digital-forms"><i class="fas fa-info-circle"></i> Learn More</button>
-                            <a href="mailto:mxetservices@gmail.com?subject=Inquiry%3A%20Digital%20Form%20%26%20Data%20Systems" class="btn-request"><i class="fas fa-paper-plane"></i> Request Now</a>
+                            <a href="https://forms.gle/ckJ2NMokfh3DjMZ38" target="_blank" class="btn-request"><i class="fas fa-file-alt"></i> Fill Out Our 3-Minute Brief</a>
                         </div>
                     </div>
                     <div class="service-card">
                         <h4>Automated Workflow Solutions</h4>
-                        <p>Save time with automated tasks like customer follow-ups or approvals, so you can focus on growth.</p>
+                        <p>Save time by automating key processes. We can help you manage:</p>
+                        <ul>
+                            <li>Automated Communication & Reminders</li>
+                            <li>Request & Approval Management</li>
+                            <li>Automated Data Processing & Entry</li>
+                            <li>Task & Process Routing</li>
+                            <li>Automated Report Generation</li>
+                        </ul>
                         <div class="service-actions">
                             <button class="btn-learn learn-more" data-modal="workflow-solutions"><i class="fas fa-info-circle"></i> Learn More</button>
-                            <a href="mailto:mxetservices@gmail.com?subject=Inquiry%3A%20Automated%20Workflow%20Solutions" class="btn-request"><i class="fas fa-paper-plane"></i> Request Now</a>
+                            <a href="https://forms.gle/ckJ2NMokfh3DjMZ38" target="_blank" class="btn-request"><i class="fas fa-file-alt"></i> Fill Out Our 3-Minute Brief</a>
                         </div>
                     </div>
                     <div class="service-card">
-                        <h4>Simple Inventory Systems</h4>
-                        <p>Track your business inventory with tools that alert you when supplies run low-ideal for operations.</p>
+                        <h4>Simple Inventory & Asset Tracking</h4>
+                        <p>Track your business assets with tools that alert you when supplies run low, perfect for:</p>
+                        <ul>
+                            <li>Retail & E-commerce Products</li>
+                            <li>Consumable Supplies (e.g. food, office)</li>
+                            <li>Organizational Assets (e.g. equipment)</li>
+                            <li>Rental Items or Digital Licenses</li>
+                        </ul>
                         <div class="service-actions">
                             <button class="btn-learn learn-more" data-modal="inventory-systems"><i class="fas fa-info-circle"></i> Learn More</button>
-                            <a href="mailto:mxetservices@gmail.com?subject=Inquiry%3A%20Simple%20Inventory%20Systems" class="btn-request"><i class="fas fa-paper-plane"></i> Request Now</a>
+                           <a href="https://forms.gle/ckJ2NMokfh3DjMZ38" target="_blank" class="btn-request"><i class="fas fa-file-alt"></i> Fill Out Our 3-Minute Brief</a>
                         </div>
                     </div>
                     <div class="service-card">
                         <h4>Simple Project Management</h4>
-                        <p>Keep projects on track with tools to manage tasks and progress, designed for teams.</p>
+                        <p>Keep your projects on track with custom tools designed for:</p>
+                         <ul>
+                            <li>Task & Deadline Tracking</li>
+                            <li>Project Portfolio Overviews</li>
+                            <li>Team Collaboration & Communication</li>
+                            <li>Client-Facing Progress Reporting</li>
+                            <li>Resource & Workload Management</li>
+                        </ul>
                         <div class="service-actions">
                             <button class="btn-learn learn-more" data-modal="project-management"><i class="fas fa-info-circle"></i> Learn More</button>
-                            <a href="mailto:mxetservices@gmail.com?subject=Inquiry%3A%20Simple%20Project%20Management" class="btn-request"><i class="fas fa-paper-plane"></i> Request Now</a>
+                            <a href="https://forms.gle/ckJ2NMokfh3DjMZ38" target="_blank" class="btn-request"><i class="fas fa-file-alt"></i> Fill Out Our 3-Minute Brief</a>
                         </div>
                     </div>
                 </div>
@@ -246,10 +282,17 @@
                 <div class="service-grid">
                     <div class="service-card">
                         <h4>Revenue & Expense Analytics</h4>
-                        <p>Gain full visibility into your cash flow. Our tools help you track revenue, categorize expenses, and visualize key performance indicators for smarter decision-making.</p>
+                        <p>Gain visibility into your cash flow with tools that let you analyze and visualize:</p>
+                        <ul>
+                            <li>Financial Tracking (Sales & Expenses)</li>
+                            <li>Key Performance Dashboards</li>
+                            <li>Operational Metrics (e.g. attendance)</li>
+                            <li>Cash Flow Analysis and Trends</li>
+                            <li>Forecasting & Goal Setting</li>
+                        </ul>
                         <div class="service-actions">
                             <button class="btn-learn learn-more" data-modal="financial-tools"><i class="fas fa-info-circle"></i> Learn More</button>
-                            <a href="mailto:mxetservices@gmail.com?subject=Inquiry%3A%20Revenue%20%26%20Expense%20Analytics" class="btn-request"><i class="fas fa-paper-plane"></i> Request Now</a>
+                           <a href="https://forms.gle/ckJ2NMokfh3DjMZ38" target="_blank" class="btn-request"><i class="fas fa-file-alt"></i> Fill Out Our 3-Minute Brief</a>
                         </div>
                     </div>
                 </div>
@@ -262,32 +305,54 @@
                 <div class="service-grid">
                     <div class="service-card">
                         <h4>Social Media Content Planner</h4>
-                        <p>Grow your online presence with a planner to schedule and track your social media posts.</p>
+                         <p>Grow your online presence with a custom planner that helps with:</p>
+                        <ul>
+                            <li>Multi-Platform Content Calendars</li>
+                            <li>Content Strategy & Ideation</li>
+                            <li>Team Approval Workflows</li>
+                            <li>Campaign & Theme Coordination</li>
+                            <li>Performance & Analytics Tracking</li>
+                        </ul>
                         <div class="service-actions">
                             <button class="btn-learn learn-more" data-modal="social-planner"><i class="fas fa-info-circle"></i> Learn More</button>
-                            <a href="mailto:mxetservices@gmail.com?subject=Inquiry%3A%20Social%20Media%20Content%20Planner" class="btn-request"><i class="fas fa-paper-plane"></i> Request Now</a>
+                           <a href="https://forms.gle/ckJ2NMokfh3DjMZ38" target="_blank" class="btn-request"><i class="fas fa-file-alt"></i> Fill Out Our 3-Minute Brief</a>
                         </div>
                     </div>
                     <div class="service-card">
                         <h4>Document Automation & Templates</h4>
-                        <p>Create professional invoices or proposals in minutes with our automated templates.</p>
+                        <p>Instantly generate professional documents like:</p>
+                        <ul>
+                            <li>Invoices, Receipts, and Quotes</li>
+                            <li>Proposals & Monthly Reports</li>
+                            <li>Event Certificates & Standardized Letters</li>
+                            <li>Client & Member Onboarding Packets</li>
+                            <li>Custom Branded Templates</li>
+                        </ul>
                         <div class="service-actions">
                             <button class="btn-learn learn-more" data-modal="document-automation"><i class="fas fa-info-circle"></i> Learn More</button>
-                            <a href="mailto:mxetservices@gmail.com?subject=Inquiry%3A%20Document%20Automation%20%26%20Templates" class="btn-request"><i class="fas fa-paper-plane"></i> Request Now</a>
+                           <a href="https://forms.gle/ckJ2NMokfh3DjMZ38" target="_blank" class="btn-request"><i class="fas fa-file-alt"></i> Fill Out Our 3-Minute Brief</a>
                         </div>
                     </div>
                     <div class="service-card">
                         <h4>Training & Support Packages</h4>
-                        <p>Learn Google Workspace and boost productivity with our tailored training sessions.</p>
+                        <p>Boost your team's productivity with our tailored training and support for:</p>
+                        <ul>
+                            <li>Google Workspace Essentials</li>
+                            <li>Productivity & Automation Tools</li>
+                            <li>Data & File Management Best Practices</li>
+                            <li>Custom Solution Walkthroughs</li>
+                            <li>Digital Strategy Consultations</li>
+                        </ul>
                         <div class="service-actions">
                             <button class="btn-learn learn-more" data-modal="training-support"><i class="fas fa-info-circle"></i> Learn More</button>
-                            <a href="mailto:mxetservices@gmail.com?subject=Inquiry%3A%20Training%20%26%20Support%20Packages" class="btn-request"><i class="fas fa-paper-plane"></i> Request Now</a>
+                           <a href="https://forms.gle/ckJ2NMokfh3DjMZ38" target="_blank" class="btn-request"><i class="fas fa-file-alt"></i> Fill Out Our 3-Minute Brief</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
 
     <section id="store" class="featured-store">
         <div class="store-container">
@@ -298,20 +363,20 @@
             <div class="store-grid">
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="assets/images/product-spending-tracker.jpg" alt="A mockup of the 2025 Spending Tracker dashboard on a laptop screen">
+                        <img src="assets/images/product-spending-tracker.jpg" alt="A mockup of the 2025 Spending Tracker dashboard on a laptop screen" onerror="this.parentElement.classList.add('img-error')">
                     </div>
                     <div class="product-content">
                         <h3 class="product-title">Your 2025 Spending Tracker</h3>
                         <p class="product-description">A smart, offline-capable Google Sheet to manage your money flows with ease. Track expenses, see insights and trends.</p>
                         <div class="product-actions">
                             <a href="https://selar.com/y25st" class="btn-store" target="_blank"><i class="fas fa-shopping-cart"></i> Buy Now</a>
-                            <a href="https://selar.com/y25st-demo" class="btn-learn" target="_blank"><i class="fas fa-eye"></i> View Demo</a>
+                            <a href="https://selar.com/y25st-demo" class="btn-learn" target="_blank"><i class="fas fa-eye"></i> Demo (FREE)</a>
                         </div>
                     </div>
                 </div>
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="assets/images/product-invoice-templates.jpg" alt="A mockup of professional invoice templates on a tablet device">
+                        <img src="assets/images/product-invoice-templates.jpg" alt="A mockup of professional invoice templates on a tablet device" onerror="this.parentElement.classList.add('img-error')">
                     </div>
                     <div class="product-content">
                         <h3 class="product-title">Professional Invoice Templates</h3>
@@ -323,7 +388,7 @@
                 </div>
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="assets/images/product-business-dashboard.jpg" alt="A mockup of a business KPI dashboard displayed on a desktop monitor">
+                        <img src="assets/images/product-business-dashboard.jpg" alt="A mockup of a business KPI dashboard displayed on a desktop monitor" onerror="this.parentElement.classList.add('img-error')">
                     </div>
                     <div class="product-content">
                         <h3 class="product-title">Business Dashboard Templates</h3>
@@ -340,6 +405,7 @@
         </div>
     </section>
 
+
     <section id="how-it-works" class="how-it-works">
         <div class="works-container">
             <div class="section-header">
@@ -355,7 +421,7 @@
                 <div class="step-card">
                     <div class="step-number">2</div>
                     <h3 class="step-title">Connect & Discuss</h3>
-                    <p class="step-description">Click "Request Now" to send an email. We'll discuss your requirements and customize the solution for your specific needs.</p>
+                    <p class="step-description">Click "Fill Out Our Brief" to share your project details. We'll get a clear picture of your requirements right away.</p>
                 </div>
                 <div class="step-card">
                     <div class="step-number">3</div>
@@ -365,6 +431,7 @@
             </div>
         </div>
     </section>
+
 
     <section id="contact" class="contact">
         <div class="contact-container">
@@ -392,6 +459,7 @@
             </div>
         </div>
     </section>
+
 
     <footer>
         <div class="footer-container">
@@ -436,18 +504,21 @@
         </div>
     </footer>
 
+
     <a href="#" class="back-to-top">
         <i class="fas fa-arrow-up"></i>
     </a>
 
+
     <div id="digital-forms" class="modal"><div class="modal-content"><span class="modal-close">×</span><h3>Digital Form & Data Systems</h3><p>Collect data effortlessly with custom forms tailored to your needs. Our solutions include automated data organization, email confirmations, and comprehensive reports to help you make informed decisions.</p><p><strong>Perfect for:</strong> Event registrations, customer feedback surveys, attendance tracking, lead generation forms, and membership applications.</p><p><strong>Features:</strong> Real-time data collection, automated email notifications, custom branding, and data export capabilities.</p></div></div>
     <div id="workflow-solutions" class="modal"><div class="modal-content"><span class="modal-close">×</span><h3>Automated Workflow Solutions</h3><p>Streamline your operations by automating repetitive tasks. Focus on what matters most while we handle routine work like follow-ups, approvals, and reminders.</p><p><strong>Perfect for:</strong> Customer follow-ups, loan approval processes, appointment reminders, and deadline notifications.</p><p><strong>Features:</strong> Custom automation rules, multi-step workflows, conditional logic, and scheduled tasks.</p></div></div>
-    <div id="inventory-systems" class="modal"><div class="modal-content"><span class="modal-close">×</span><h3>Simple Inventory Systems</h3><p>Keep track of your business inventory with intelligent systems that provide real-time alerts when stock levels run low. Perfect for businesses of all sizes.</p><p><strong>Perfect for:</strong> Retail stock monitoring, restaurant ingredient tracking, and e-commerce product management.</p><p><strong>Features:</strong> Low stock alerts, supplier management, cost tracking, and comprehensive reporting.</p></div></div>
+    <div id="inventory-systems" class="modal"><div class="modal-content"><span class="modal-close">×</span><h3>Simple Inventory & Asset Tracking</h3><p>Keep track of your business inventory with intelligent systems that provide real-time alerts when stock levels run low. Perfect for businesses of all sizes.</p><p><strong>Perfect for:</strong> Retail stock monitoring, restaurant ingredient tracking, and e-commerce product management.</p><p><strong>Features:</strong> Low stock alerts, supplier management, cost tracking, and comprehensive reporting.</p></div></div>
     <div id="project-management" class="modal"><div class="modal-content"><span class="modal-close">×</span><h3>Simple Project Management</h3><p>Manage projects efficiently with custom dashboards, task tracking, and automated reminders. Keep your team organized and projects on schedule.</p><p><strong>Perfect for:</strong> Client project tracking, marketing campaign coordination, and team deliverable management.</p><p><strong>Features:</strong> Task assignments, progress tracking, deadline reminders, and team collaboration.</p></div></div>
     <div id="financial-tools" class="modal"><div class="modal-content"><span class="modal-close">×</span><h3>Revenue & Expense Analytics</h3><p>Take control of your cash flow with comprehensive data tools. We provide systems for budget tracking, expense categorization, and visualizing your performance data, empowering you to plan with clarity.</p><p><strong>Perfect for:</strong> Business sales tracking, personal budgeting, cash flow monitoring, and performance reporting.</p><p><strong>Features:</strong> Budget planning, expense categorization, KPI dashboards, and data-driven forecasts.</p></div></div>
     <div id="social-planner" class="modal"><div class="modal-content"><span class="modal-close">×</span><h3>Social Media Content Planner</h3><p>Build and maintain a strong online presence with our content planning tools. Schedule posts, track engagement, and analyze performance across platforms.</p><p><strong>Perfect for:</strong> Brand content scheduling, influencer engagement tracking, and agency campaign planning.</p><p><strong>Features:</strong> Content calendar, post scheduling, engagement analytics, and performance reporting.</p></div></div>
     <div id="document-automation" class="modal"><div class="modal-content"><span class="modal-close">×</span><h3>Document Automation & Templates</h3><p>Create professional documents instantly with our automated templates. Customize with your branding and auto-populate data for consistent results.</p><p><strong>Perfect for:</strong> Invoices for freelancers, proposals for consultants, and reports for organizations.</p><p><strong>Features:</strong> Custom branding, automated calculations, professional layouts, and batch processing.</p></div></div>
     <div id="training-support" class="modal"><div class="modal-content"><span class="modal-close">×</span><h3>Training & Support Packages</h3><p>Master Google Workspace and other productivity tools with our comprehensive training. Get ongoing support to maximize your team's productivity.</p><p><strong>Perfect for:</strong> Small team training, shared drive setup, and productivity workshops.</p><p><strong>Features:</strong> Live training sessions, custom tutorials, ongoing support, and best practices guides.</p></div></div>
+
 
     <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -457,6 +528,7 @@
         const body = document.body;
         const icon = menuToggle.querySelector('i');
 
+
         function toggleMobileMenu() {
             body.classList.toggle('menu-open');
             const isMenuOpen = body.classList.contains('menu-open');
@@ -464,14 +536,17 @@
             icon.classList.toggle('fa-bars', !isMenuOpen);
         }
 
+
         menuToggle.addEventListener('click', toggleMobileMenu);
         menuOverlay.addEventListener('click', toggleMobileMenu);
+
 
         window.addEventListener('scroll', () => {
             if (backToTop) {
                 backToTop.style.display = window.scrollY > 300 ? 'flex' : 'none';
             }
         });
+
 
         if (backToTop) {
             backToTop.addEventListener('click', (e) => {
@@ -509,10 +584,12 @@
             }
         });
 
+
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 const isMobileNavLink = this.closest('.mobile-nav');
                 if (this.getAttribute('href') === '#') { return; }
+
 
                 e.preventDefault();
                 if (body.classList.contains('menu-open')) {
@@ -527,10 +604,12 @@
             });
         });
 
+
         const slides = document.querySelectorAll('#contact .carousel-slide');
         if (slides.length > 0) {
             let currentIndex = 0;
             slides[currentIndex].classList.add('is-visible');
+
 
             setInterval(() => {
                 slides[currentIndex].classList.remove('is-visible');
@@ -538,6 +617,7 @@
                 slides[currentIndex].classList.add('is-visible');
             }, 5000);
         }
+
 
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
@@ -548,6 +628,7 @@
                 }
             });
         }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
 
         document.querySelectorAll('.service-card, .step-card, .product-card, .service-category, .section-header, .hero-container > *, .contact-carousel, .contact-buttons').forEach(el => {
             el.style.opacity = '0';
