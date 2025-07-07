@@ -66,7 +66,7 @@
         .header-nav { display: flex; gap: 30px; align-items: center; }
         .header-nav a { color: var(--dark-text); text-decoration: none; font-weight: 500; transition: var(--transition); position: relative; padding: 8px 16px; border-radius: 8px; }
         .header-nav a:not(.cta-button):hover { color: var(--primary-green); background: rgba(0, 81, 61, 0.1); }
-        .cta-button { background: var(--gradient-primary); color: var(--white) !important; padding: 12px 24px; border-radius: var(--border-radius); text-decoration: none; font-weight: 600; transition: var(--transition); box-shadow: var(--shadow-md); }
+        .cta-button { background: var(--gradient-primary); color: var(--white) !important; padding: 12px 24px; border-radius: var(--border-radius); text-decoration: none; font-weight: 600; transition: var(--transition); box-shadow: var(--shadow-md); display: inline-flex; align-items: center; gap: 8px; }
         .cta-button:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
         .mobile-menu-toggle { display: none; background: none; border: none; font-size: 1.5rem; color: var(--primary-green); cursor: pointer; z-index: 1100; }
         .menu-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1040; opacity: 0; transition: opacity 0.3s ease; }
@@ -101,7 +101,7 @@
         .service-card p { color: var(--neutral-grey); margin-bottom: 10px; line-height: 1.6; }
         .service-card ul { color: var(--neutral-grey); margin-bottom: 25px; line-height: 1.6; flex-grow: 1; padding-left: 20px; }
         .service-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: auto; }
-        .btn-learn { background: var(--gradient-primary); color: var(--white); padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: var(--transition); display: inline-flex; align-items: center; gap: 6px; border: none; cursor: pointer; font-family: inherit; }
+        .btn-learn { background: var(--white); color: var(--primary-green); padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: var(--transition); display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--primary-green); cursor: pointer; font-family: inherit; }
         .btn-learn:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
         .btn-request { background: var(--gradient-primary); color: var(--white); padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: var(--transition); display: inline-flex; align-items: center; gap: 6px; }
         .btn-request:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
@@ -181,7 +181,7 @@
                 <a href="#store">Store</a>
                 <a href="#how-it-works">How It Works</a>
                 <a href="https://forms.gle/ckJ2NMokfh3DjMZ38" class="cta-button" target="_blank">
-                    Fill Out Our 3-Minute Brief
+                    <i class="fas fa-file-alt"></i> Get Started
                 </a>
             </nav>
             <button class="mobile-menu-toggle">
@@ -241,7 +241,7 @@
                         </ul>
                         <div class="service-actions">
                             <button class="btn-learn learn-more" data-modal="digital-forms"><i class="fas fa-info-circle"></i> Learn More</button>
-                            <a href="https://forms.gle/ckJ2NMokfh3DjMZ38" target="_blank" class="btn-request"><i class="fas fa-rocket"></i> Get Started</a>
+                            <a href="https://forms.gle/ckJ2NMokfh3DjMZ38" target="_blank" class="btn-request"><i class="fas fa-file-alt"></i> Get Started</a>
                         </div>
                     </div>
                     <div class="service-card">
@@ -256,7 +256,7 @@
                         </ul>
                         <div class="service-actions">
                             <button class="btn-learn learn-more" data-modal="workflow-solutions"><i class="fas fa-info-circle"></i> Learn More</button>
-                            <a href="https://forms.gle/ckJ2NMokfh3DjMZ38" target="_blank" class="btn-request"><i class="fas fa-rocket"></i> Get Started</a>
+                            <a href="https://forms.gle/ckJ2NMokfh3DjMZ38" target="_blank" class="btn-request"><i class="fas fa-file-alt"></i> Get Started</a>
                         </div>
                     </div>
                     <div class="service-card">
@@ -270,7 +270,7 @@
                         </ul>
                         <div class="service-actions">
                             <button class="btn-learn learn-more" data-modal="inventory-systems"><i class="fas fa-info-circle"></i> Learn More</button>
-                           <a href="https://forms.gle/ckJ2NMokfh3DjMZ38" target="_blank" class="btn-request"><i class="fas fa-rocket"></i> Get Started</a>
+                           <a href="https://forms.gle/ckJ2NMokfh3DjMZ38" target="_blank" class="btn-request"><i class="fas fa-file-alt"></i> Get Started</a>
                         </div>
                     </div>
                     <div class="service-card">
@@ -285,7 +285,7 @@
                         </ul>
                         <div class="service-actions">
                             <button class="btn-learn learn-more" data-modal="project-management"><i class="fas fa-info-circle"></i> Learn More</button>
-                            <a href="https://forms.gle/ckJ2NMokfh3DjMZ38" target="_blank" class="btn-request"><i class="fas fa-rocket"></i> Get Started</a>
+                            <a href="https://forms.gle/ckJ2NMokfh3DjMZ38" target="_blank" class="btn-request"><i class="fas fa-file-alt"></i> Get Started</a>
                         </div>
                     </div>
                 </div>
@@ -308,7 +308,7 @@
                         </ul>
                         <div class="service-actions">
                             <button class="btn-learn learn-more" data-modal="financial-tools"><i class="fas fa-info-circle"></i> Learn More</button>
-                           <a href="https://forms.gle/ckJ2NMokfh3DjMZ38" target="_blank" class="btn-request"><i class="fas fa-rocket"></i> Get Started</a>
+                           <a href="https://forms.gle/ckJ2NMokfh3DjMZ38" target="_blank" class="btn-request"><i class="fas fa-file-alt"></i> Get Started</a>
                         </div>
                     </div>
                 </div>
@@ -331,7 +331,7 @@
                         </ul>
                         <div class="service-actions">
                             <button class="btn-learn learn-more" data-modal="social-planner"><i class="fas fa-info-circle"></i> Learn More</button>
-                           <a href="https://forms.gle/ckJ2NMokfh3DjMZ38" target="_blank" class="btn-request"><i class="fas fa-rocket"></i> Get Started</a>
+                           <a href="https://forms.gle/ckJ2NMokfh3DjMZ38" target="_blank" class="btn-request"><i class="fas fa-file-alt"></i> Get Started</a>
                         </div>
                     </div>
                     <div class="service-card">
@@ -346,7 +346,7 @@
                         </ul>
                         <div class="service-actions">
                             <button class="btn-learn learn-more" data-modal="document-automation"><i class="fas fa-info-circle"></i> Learn More</button>
-                           <a href="https://forms.gle/ckJ2NMokfh3DjMZ38" target="_blank" class="btn-request"><i class="fas fa-rocket"></i> Get Started</a>
+                           <a href="https://forms.gle/ckJ2NMokfh3DjMZ38" target="_blank" class="btn-request"><i class="fas fa-file-alt"></i> Get Started</a>
                         </div>
                     </div>
                     <div class="service-card">
@@ -361,7 +361,7 @@
                         </ul>
                         <div class="service-actions">
                             <button class="btn-learn learn-more" data-modal="training-support"><i class="fas fa-info-circle"></i> Learn More</button>
-                           <a href="https://forms.gle/ckJ2NMokfh3DjMZ38" target="_blank" class="btn-request"><i class="fas fa-rocket"></i> Get Started</a>
+                           <a href="https://forms.gle/ckJ2NMokfh3DjMZ38" target="_blank" class="btn-request"><i class="fas fa-file-alt"></i> Get Started</a>
                         </div>
                     </div>
                 </div>
@@ -467,7 +467,7 @@
             </div>
             <div class="contact-buttons">
                 <a href="https://forms.gle/ckJ2NMokfh3DjMZ38" class="btn-contact" target="_blank">
-                    <i class="fas fa-file-alt"></i> Start Your Project Inquiry
+                    <i class="fas fa-file-alt"></i> Get Started
                 </a>
                 <a href="mailto:mxetservices@gmail.com" class="btn-contact">
                     <i class="fas fa-envelope"></i> Email Us
