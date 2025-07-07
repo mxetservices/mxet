@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Productivity Solutions for Businesses and Individuals - MXET</title>
-    <meta name="description" content="Affordable digital tools for businesses, SMEs, and individuals to boost productivity and growth.">
-    <meta name="keywords" content="digital solutions, productivity tools for SMEs, business automation, finance tools, marketing solutions, Google Sheets templates">
+    <!-- SEO and Social Sharing Tags Updated -->
+    <meta name="description" content="Boost your business productivity with custom Google Sheets templates, automated workflows via Google Forms, and powerful Google Workspace solutions. MXET builds affordable digital tools for SMEs, organizations, and individuals.">
+    <meta name="keywords" content="Google Sheets, Google Workspace, Google Forms, custom templates, event registration forms, expense tracker, inventory management, project management dashboard, automated invoices, business automation, productivity tools for SMEs">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mxetservices.github.io/mxet/">
     <meta property="og:title" content="Digital Productivity Solutions for Businesses and Individuals - MXET">
-    <meta property="og:description" content="Affordable digital tools for businesses, SMEs, and individuals to boost productivity and growth.">
+    <meta property="og:description" content="Boost your business productivity with custom Google Sheets templates, automated workflows via Google Forms, and powerful Google Workspace solutions.">
     <meta property="og:image" content="https://mxetservices.github.io/mxet/assets/images/logo.png">
     <meta property="og:site_name" content="MXET Services">
 
@@ -19,7 +20,7 @@
     <meta property="twitter:card" content="summary">
     <meta property="twitter:url" content="https://mxetservices.github.io/mxet/">
     <meta property="twitter:title" content="Digital Productivity Solutions for Businesses and Individuals - MXET">
-    <meta property="twitter:description" content="Affordable digital tools for businesses, SMEs, and individuals to boost productivity and growth.">
+    <meta property="twitter:description" content="Boost your business productivity with custom Google Sheets templates, automated workflows via Google Forms, and powerful Google Workspace solutions.">
     <meta property="twitter:image" content="https://mxetservices.github.io/mxet/assets/images/logo.png">
     <meta name="twitter:site" content="@mxetservices">
     <meta name="twitter:creator" content="@mxetservices">
@@ -65,7 +66,7 @@
         "@type": "Country",
         "name": "Nigeria"
       },
-      "description": "Affordable digital tools for businesses, SMEs, and individuals to boost productivity and growth."
+      "description": "Affordable digital tools and productivity solutions for businesses and SMEs using Google Workspace, Google Sheets, and Google Forms."
     }
     </script>
 
@@ -240,15 +241,14 @@
                 <h1 class="hero-title">Simplify Your Life, Empower Your Business</h1>
                 <p class="hero-subtitle">Discover affordable digital tools and services to boost your productivity and growth.</p>
                 <div class="hero-buttons">
-                    <a href="#services" class="btn-primary">
+                    <a href="https://forms.gle/ckJ2NMokfh3DjMZ38" class="btn-primary" target="_blank">
+                        <i class="fas fa-file-alt"></i> Get Started
+                    </a>
+                    <a href="#services" class="btn-secondary">
                         <i class="fas fa-rocket"></i> Explore Our Solutions
                     </a>
-                    <a href="#store" class="btn-secondary">
-                        <i class="fas fa-store"></i> Visit Our Store
-                    </a>
                 </div>
-            </div>
-        </section>
+            </section>
 
         <section id="services" class="services">
             <div class="services-container">
@@ -620,7 +620,7 @@
         document.querySelectorAll('.modal-close').forEach(close => {
             close.addEventListener('click', () => {
                 close.closest('.modal').classList.remove('active');
-                if (!body.classList.contains('menu-open')) {
+                if (!body.classList.contents.contains('menu-open')) {
                     body.style.overflow = 'auto';
                 }
             });
