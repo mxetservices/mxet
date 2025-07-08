@@ -107,7 +107,7 @@
         .hero-title { font-family: 'Roboto', sans-serif; font-size: 3.5rem; font-weight: 700; margin-bottom: 20px; line-height: 1.2; background: linear-gradient(135deg, var(--white), #e0e0e0); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
         .hero-subtitle { font-size: 1.3rem; margin-bottom: 30px; opacity: 0.9; max-width: 600px; margin-left: auto; margin-right: auto; font-weight: 400; }
         .hero-buttons { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 40px; }
-        .btn-primary { background: var(--white); color: var(--primary-green); padding: 16px 32px; border-radius: var(--border-radius); text-decoration: none; font-weight: 600; transition: var(--transition); box-shadow: var(--shadow-md); display: inline-flex; align-items: center; gap: 8px; }
+        .btn-primary { background: var(--white); color: var(--primary-green); padding: 16px 32px; border-radius: var(--border-radius); text-decoration: none; font-weight: 600; transition: var(--transition); box-shadow: var(--shadow-md); display: inline-flex; align-items: center; justify-content: center; gap: 8px; }
         .btn-primary:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
         .btn-secondary { background: transparent; color: var(--white); border: 2px solid var(--white); padding: 14px 30px; border-radius: var(--border-radius); text-decoration: none; font-weight: 600; transition: var(--transition); display: inline-flex; align-items: center; gap: 8px; }
         .btn-secondary:hover { background: var(--white); color: var(--primary-green); }
@@ -197,7 +197,7 @@
         @media (max-width: 480px) { .hero-title { font-size: 2rem; } .section-title { font-size: 2rem; } .service-card { padding: 20px; } .service-actions { flex-direction: column; align-items: flex-start; } .logo { width: 45px; height: 45px; } .tagline { display: none; } .contact-carousel {min-height: 180px;} }
     </style>
 </head>
-<body>
+<body id="home">
     <header>
         <div class="header-container">
             <div class="logo-section">
@@ -222,9 +222,11 @@
 
     <div class="menu-overlay"></div>
     <nav class="mobile-nav">
+        <a href="#home">Home</a>
         <a href="#services">Services</a>
         <a href="#store">Store</a>
         <a href="#how-it-works">How It Works</a>
+        <a href="#about-mxet">About MXET</a>
         <a href="#contact">Contact</a>
         <a href="https://forms.gle/ckJ2NMokfh3DjMZ38" target="_blank">Get Started</a>
     </nav>
@@ -236,7 +238,7 @@
                 <p class="hero-subtitle">Discover affordable digital tools and services to boost your productivity and growth.</p>
                 <div class="hero-buttons">
                     <a href="https://forms.gle/ckJ2NMokfh3DjMZ38" class="btn-primary" target="_blank">
-                        <i class="fas fa-file-alt"></i> Get Started
+                        Get Started
                     </a>
                     <a href="#services" class="btn-secondary">
                         <i class="fas fa-rocket"></i> Explore Our Solutions
@@ -508,7 +510,7 @@
     <footer>
         <div class="footer-container">
             <div class="footer-content">
-                <div class="footer-section">
+                <div id="about-mxet" class="footer-section">
                     <a href="https://mxetservices.github.io/mxet/" style="display: flex; align-items: center; gap: 15px; text-decoration: none; margin-bottom: 20px;">
                         <img src="assets/images/logo.png" alt="MXET Services Logo" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
                         <h3 style="margin-bottom: 0;">MXET Services</h3>
@@ -633,15 +635,26 @@
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 const isMobileNavLink = this.closest('.mobile-nav');
-                if (this.getAttribute('href') === '#') { return; }
+                const targetHref = this.getAttribute('href');
 
-
-                e.preventDefault();
-                if (body.classList.contains('menu-open')) {
-                    toggleMobileMenu();
+                if (targetHref === '#') { 
+                    e.preventDefault();
+                    if (body.classList.contains('menu-open')) {
+                        toggleMobileMenu();
+                    }
+                     setTimeout(() => {
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }, isMobileNavLink ? 300 : 0);
+                    return; 
                 }
-                const targetElement = document.querySelector(this.getAttribute('href'));
+
+                const targetElement = document.querySelector(targetHref);
+
                 if (targetElement) {
+                    e.preventDefault();
+                    if (body.classList.contains('menu-open')) {
+                        toggleMobileMenu();
+                    }
                     setTimeout(() => {
                         targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
                     }, isMobileNavLink ? 300 : 0);
