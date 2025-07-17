@@ -2,7 +2,7 @@
   "name": "MXET - Digital Productivity Solutions",
   "short_name": "MXET",
   "description": "Affordable digital tools and solutions to simplify tasks and boost growth for businesses and individuals.",
-  "start_url": "/",
+  "start_url": "https://mxetservices.github.io/mxet/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#00513d",
